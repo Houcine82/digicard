@@ -51,7 +51,7 @@ export default function Hero() {
 
   return (
     <div className="relative text-center min-h-screen flex flex-col gap-8 justify-center items-center">
-      <h1 className="hero-h1-text font-extrabold text-2xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-400">
+      <h1 className="hero-h1-text font-extrabold text-2xl md:text-5xl bg-clip-text text-white bg-gradient-to-b from-white to-blue-400">
         <span>La</span> <span>carte</span> <span>de</span> <span>visite</span> <span>digitale</span> <br /> 
         <div className="">
         <span>#1</span> <span>au</span> <span>Maroc</span>

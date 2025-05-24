@@ -27,7 +27,7 @@ export default function Header() {
     return (
         <header className="fixed hidden md:inline w-full top-0 z-50 px-4 py-4">
             <div className="w-full flex items-center justify-center">
-                <nav className="px-4 py-2 rounded-full border-[.3px] flex gap-4 items-center border-white/20 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-sm">
+                <nav className="px-8 py-2 rounded-full border-[.3px] flex gap-4 justify-center items-center border-white/20 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-sm">
                     {navItems.map((item, index) => (
                         <div key={index} className="relative drop">
                             <a 
