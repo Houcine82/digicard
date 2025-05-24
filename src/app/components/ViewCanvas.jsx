@@ -155,7 +155,7 @@ function Cards() {
         trigger: ".hero2",
         start: "top bottom",
         end: "bottom bottom",
-        scrub: 1,
+        scrub: 0.3,
         snap: {
           snapTo: "labels", // snap to the closest label in the timeline
           duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
@@ -193,7 +193,7 @@ function Cards() {
           trigger: ".pricing",
           start: "top bottom",
           end: "bottom bottom",
-          scrub: 1,
+          scrub: 0.3,
           snap: {
             snapTo: "labels", // snap to the closest label in the timeline
             duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
@@ -245,7 +245,7 @@ export default function ViewCanvas({ ...props }) {
       gl={{ antialias: true }}
     >
       <Cards />
-      <Environment files="/hdrs/lobby.hdr" environmentIntensity={1.25} />
+      <Environment files="/hdrs/lobby.hdr" environmentIntensity={0.75} />
     </Canvas>
   );
 }
