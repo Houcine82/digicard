@@ -9,7 +9,7 @@ function PricingCard() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="min-w-80 w-full max-w-md rounded-xl overflow-hidden bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-sm border border-white/20">
+      <div className="min-w-[28rem] max-w-md rounded-xl overflow-hidden bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-sm border border-white/20">
         {/* Top Image Flip Section */}
         <div
           className="relative w-full h-64 bg-gradient-to-br from-white/10 to-white/5 p-3 rounded-t-xl cursor-pointer"
@@ -31,7 +31,7 @@ function PricingCard() {
         </div>
 
         {/* Title + Price */}
-        <div className="flex justify-between items-start gap-4 px-6 mt-6">
+        <div className="flex justify-between items-start gap-8 px-6 mt-6">
           <h3 className="text-lg sm:text-xl font-semibold capitalize text-white">DIGICard Reviews</h3>
           <div className="relative text-right">
             <div className="text-lg sm:text-xl font-medium text-white">190 MAD</div>
@@ -40,7 +40,7 @@ function PricingCard() {
         </div>
 
         {/* Features */}
-        <ul className="mt-8 flex flex-col gap-4 px-6">
+        <ul className="mt-8 flex flex-col gap-8 px-6">
           {[
             "Partage illimité",
             "Compatibilité avec toutes les plateformes d'avis",
@@ -48,7 +48,7 @@ function PricingCard() {
             "Personnalisation complète",
             "Collecte instantanée des avis",
           ].map((feature, index) => (
-            <li key={index} className="flex items-center gap-3 text-white/80 text-sm sm:text-md">
+            <li key={index} className="flex items-center gap-8 text-white/80 text-sm sm:text-md">
               <FaCheck className="w-4 h-4 -mb-[2px] text-white" />
               <span>{feature}</span>
             </li>
@@ -72,7 +72,7 @@ function PricingCard() {
 
 export default function Pricing() {
     return (
-        <div className="pricing w-full min-h-screen flex flex-col justify-center items-end gap-8 md:px-24">
+        <div className="pricing w-full min-h-screen flex flex-col justify-center items-end gap-8 md:px-40">
             
             <PricingCard />
 
