@@ -14,6 +14,10 @@
   }
 }
 
+@theme {
+  --animate-scroll: scroll ease-in-out infinite;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -32,4 +36,13 @@ body {
 
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Hero2 from "./components/Hero2";
 import Pricing from "./components/Pricing";
 import ScrollingButtons from "./components/ScrollingButtons";
+import CTA from "./components/CTA";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Hero2 />
       <Pricing />
+      <CTA />
     </div>
   );
 }

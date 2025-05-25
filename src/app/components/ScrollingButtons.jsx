@@ -20,7 +20,7 @@ export default function ScrollingButtons() {
 
   return (
     <div
-      className="right-4 flex flex-col gap-2"
+      className="right-4 flex flex-col"
       style={{
         position: "fixed",
         top: "50%",

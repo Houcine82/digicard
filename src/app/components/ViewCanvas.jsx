@@ -123,7 +123,6 @@ function Cards() {
     card1Ref.current.rotation.set(0, 0, 0);
     card2Ref.current.rotation.set(0, 0, 0);
 
-
     const cardsIntroTl = gsap.timeline();
 
     cardsIntroTl
@@ -182,30 +181,64 @@ function Cards() {
         0
       );
 
-      
-
-      // PRICING animation
-      const pricingTl = gsap.timeline({
-        defaults: {
-          duration: 2,
+    // PRICING animation
+    const pricingTl = gsap.timeline({
+      defaults: {
+        duration: 2,
+      },
+      scrollTrigger: {
+        trigger: ".pricing",
+        start: "top bottom",
+        end: "bottom bottom",
+        scrub: 0.3,
+        snap: {
+          snapTo: "labels", // snap to the closest label in the timeline
+          duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+          delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+          ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
         },
-        scrollTrigger: {
-          trigger: ".pricing",
-          start: "top bottom",
-          end: "bottom bottom",
-          scrub: 0.3,
-          snap: {
-            snapTo: "labels", // snap to the closest label in the timeline
-            duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-            delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-            ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
-          },
-        },
-      });
+      },
+    });
 
-      pricingTl
-        .to(card2Ref.current.position, { x: -0.8, duration: 1.5, ease: "power2.out" }, 0)
-        .to(card2Ref.current.rotation, { y : Math.PI / 5, duration: 1.5, ease: "power2.out" }, 0)
+    pricingTl
+      .to(
+        card2Ref.current.position,
+        { x: 8, z: 0, duration: 1.5, ease: "power2.out" },
+        0
+      )
+      .to(
+        card2Ref.current.rotation,
+        { y: 0, duration: 1.5, ease: "power2.out" },
+        0
+      );
+
+    const CTATl = gsap.timeline({
+      defaults: {
+        direction: 1.5,
+      },
+      scrollTrigger: {
+        trigger: ".CTA",
+        start: "top bottom",
+        end: "bottom bottom",
+        scrub: 0.3,
+        snap: {
+          snapTo: "labels", // snap to the closest label in the timeline
+          duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+          delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+          ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+        },
+      },
+    });
+
+    CTATl.to(
+      card1Ref.current.position,
+      { x: -1, z: -1, y: 0.9, duration: 1.5, ease: "power2.out" },
+      0
+    ).to(
+      card2Ref.current.position,
+      { x: 1, z: -1, y: 0.9, duration: 1.5, ease: "power2.out" },
+      0
+    );
   });
 
   return (
